@@ -4,6 +4,10 @@ Frontend application for a full-stack Event Management Platform built using Reac
 
 This project was built completely from scratch and includes authentication, real-time notifications, event management features, protected routes, API integration, responsive UI, and state management.
 
+# Vercel
+event-management-frontend-yuww.vercel.app
+
+
 ## Features
 
 * User authentication with JWT token-based auth
