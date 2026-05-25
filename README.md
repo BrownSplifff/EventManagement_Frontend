@@ -1,16 +1,123 @@
-# React + Vite
+# Event Management Frontend
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Frontend application for a full-stack Event Management Platform built using React, Tailwind CSS, JavaScript, and Socket.IO.
 
-Currently, two official plugins are available:
+This project was built completely from scratch and includes authentication, real-time notifications, event management features, protected routes, API integration, responsive UI, and state management.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## Features
 
-## React Compiler
+* User authentication with JWT token-based auth
+* Login and registration system
+* Protected routes
+* Create, edit, and manage events
+* Real-time notifications using Socket.IO
+* Responsive UI using Tailwind CSS
+* REST API integration
+* Dynamic routing
+* State management using React hooks
+* Image upload support
+* Form validation and error handling
+* Role-based functionality
+* Real-time event updates
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Tech Stack
 
-## Expanding the ESLint configuration
+### Frontend
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+* React
+* JavaScript
+* Tailwind CSS
+* React Router DOM
+* Socket.IO Client
+* Fetch API / REST APIs
+
+### Backend
+
+* Node.js
+* Express.js
+* PostgreSQL
+* Sequelize ORM
+* JWT Authentication
+* Socket.IO
+
+## Project Structure
+
+```bash
+src/
+ ├── components/
+ ├── pages/
+ ├── routes/
+ ├── context/
+ ├── services/
+ ├── utils/
+ ├── assets/
+ └── App.jsx
+```
+
+## Authentication
+
+This project uses JWT-based authentication for secure user login and protected routes.
+
+Features include:
+
+* Login & signup
+* Token storage
+* Protected frontend routes
+* Auth middleware integration
+* Persistent login sessions
+
+## Real-Time Features
+
+Socket.IO is used for:
+
+* Real-time notifications
+* Live event updates
+* User connection handling
+
+## Deployment
+
+Frontend deployed on Vercel.
+
+Backend deployed on Render.
+
+## Installation
+
+Clone the repository:
+
+```bash
+git clone <your-repo-url>
+```
+
+Install dependencies:
+
+```bash
+npm install
+```
+
+Run development server:
+
+```bash
+npm run dev
+```
+
+## Environment Variables
+
+Create a `.env` file:
+
+```env
+VITE_API_URL=your_backend_url
+```
+
+## Future Improvements
+
+* Payment gateway integration
+* Chat system
+* Event analytics dashboard
+* Admin moderation tools
+* Cloud image storage
+* Push notifications
+
+## Author
+
+Aditya Pandey (Frontend)
+Abhishekh Jaisi (Backend)
