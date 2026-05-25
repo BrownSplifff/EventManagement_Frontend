@@ -88,7 +88,6 @@ function NavBar() {
         console.log(err);
       }
     }
-    getNotification();
   }, []);
 
   useEffect(() => {
@@ -103,7 +102,6 @@ function NavBar() {
         console.log(error);
       }
     }
-    NotifCount();
   }, []);
 
   const NavItems = [

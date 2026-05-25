@@ -50,7 +50,7 @@ function DashboardEventCreator() {
 
   const handleUpdate = async (editformdata) => {
     try {
-      const res = await fetch(`${apiUrl}/api/events/${editingEvent.id}`, {
+      const res = await fetch(`${apiUrl}api/events/${editingEvent.id}`, {
         method: "PATCH",
         headers: {
           "Content-Type": "application/json",
@@ -77,7 +77,7 @@ function DashboardEventCreator() {
   async function fetchApplicants(eventId) {
     try {
       const res = await fetch(
-        `${apiUrl}/api/registrations/event/${eventId}/applicants`,
+        `${apiUrl}api/registrations/event/${eventId}/applicants`,
         {
           headers: { Authorization: `Bearer ${token}` },
         },
@@ -94,7 +94,7 @@ function DashboardEventCreator() {
 
   async function handleStatus(regId, status) {
     try {
-      await fetch(`${apiUrl}/api/registrations/${regId}/status`, {
+      await fetch(`${apiUrl}api/registrations/${regId}/status`, {
         method: "PATCH",
         headers: {
           "Content-Type": "application/json",
@@ -111,7 +111,7 @@ function DashboardEventCreator() {
   useEffect(() => {
     async function fetchCreatorDetails() {
       try {
-        const res = await fetch(`${apiUrl}/api/events/my-events`, {
+        const res = await fetch(`${apiUrl}api/events/my-events`, {
           method: "GET",
           headers: { Authorization: `Bearer ${token}` },
         });

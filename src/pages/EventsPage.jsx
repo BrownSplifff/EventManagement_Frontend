@@ -45,7 +45,7 @@ function EventsPage() {
 
   async function handleStatus(regId, status) {
     try {
-      await fetch(`${apiUrl}/api/registrations/${regId}/status`, {
+      await fetch(`${apiUrl}api/registrations/${regId}/status`, {
         method: "PATCH",
         headers: {
           "Content-Type": "application/json",
@@ -61,7 +61,7 @@ function EventsPage() {
 
   async function HandleDelete(id) {
     try {
-      const res = await fetch(`${apiUrl}/api/events/${id}`, {
+      const res = await fetch(`${apiUrl}api/events/${id}`, {
         method: "DELETE",
         headers: { Authorization: `Bearer ${token}` },
       });
@@ -74,7 +74,7 @@ function EventsPage() {
   async function fetchApplicants(eventId) {
     try {
       const res = await fetch(
-        `${apiUrl}/api/registrations/event/${eventId}/applicants`,
+        `${apiUrl}api/registrations/event/${eventId}/applicants`,
         {
           headers: { Authorization: `Bearer ${token}` },
         },
@@ -92,7 +92,7 @@ function EventsPage() {
   useEffect(() => {
     async function checkApplications() {
       try {
-        const res = await fetch(`${apiUrl}/api/registrations/my-applications`, {
+        const res = await fetch(`${apiUrl}api/registrations/my-applications`, {
           headers: { Authorization: `Bearer ${token}` },
         });
         const data = await res.json();
@@ -111,7 +111,7 @@ function EventsPage() {
       if (searchQuery.trim()) params.append("title", searchQuery);
       params.append("page", currentPage);
       params.append("limit", itemsPerPage);
-      const res = await fetch(`${apiUrl}/api/events/view-events?${params}`, {
+      const res = await fetch(`${apiUrl}api/events/view-events?${params}`, {
         headers: { Authorization: `Bearer ${token}` },
       });
       const data = await res.json();
@@ -144,7 +144,7 @@ function EventsPage() {
       Object.entries(formData).forEach(([key, value]) => {
         dataToSend.append(key === "image" ? "fileUpload" : key, value);
       });
-      const res = await fetch(`${apiUrl}/api/events/createEvents`, {
+      const res = await fetch(`${apiUrl}api/events/createEvents`, {
         method: "POST",
         headers: { Authorization: `Bearer ${token}` },
         body: dataToSend,
@@ -162,7 +162,7 @@ function EventsPage() {
   async function HandleEventApplication(applyFormData) {
     try {
       const res = await fetch(
-        `${apiUrl}/api/registrations/apply/${selectedEventId}`,
+        `${apiUrl}api/registrations/apply/${selectedEventId}`,
         {
           method: "POST",
           headers: {
@@ -189,7 +189,7 @@ function EventsPage() {
 
   async function handleUpdate(editformdata) {
     try {
-      const res = await fetch(`${apiUrl}/api/events/${editingEvent.id}`, {
+      const res = await fetch(`${apiUrl}api/events/${editingEvent.id}`, {
         method: "PATCH",
         headers: {
           "Content-Type": "application/json",

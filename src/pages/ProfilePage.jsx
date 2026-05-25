@@ -48,7 +48,7 @@ function ProfilePage() {
     const fetchUser = async () => {
       try {
         const token = localStorage.getItem("token");
-        const res = await fetch(`${apiUrl}/api/auth/profile`, {
+        const res = await fetch(`${apiUrl}api/auth/profile`, {
           method: "GET",
           headers: {
             "Content-Type": "application/json",

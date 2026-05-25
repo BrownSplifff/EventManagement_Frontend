@@ -28,7 +28,7 @@ function DashboardUser() {
   useEffect(() => {
     async function checkApplications() {
       try {
-        const res = await fetch(`${apiUrl}/api/registrations/my-applications`, {
+        const res = await fetch(`${apiUrl}api/registrations/my-applications`, {
           headers: { Authorization: `Bearer ${token}` },
         });
         const data = await res.json();
@@ -50,7 +50,7 @@ function DashboardUser() {
   useEffect(() => {
     async function fetchEvents() {
       try {
-        const res = await fetch(`${apiUrl}/api/events/view-events`, {
+        const res = await fetch(`${apiUrl}api/events/view-events`, {
           headers: { Authorization: `Bearer ${token}` },
         });
         const data = await res.json();
@@ -66,7 +66,7 @@ function DashboardUser() {
   async function handleEventApplication(applyFormData) {
     try {
       const res = await fetch(
-        `${apiUrl}/api/registrations/apply/${selectedEventId}`,
+        `${apiUrl}api/registrations/apply/${selectedEventId}`,
         {
           method: "POST",
           headers: {
