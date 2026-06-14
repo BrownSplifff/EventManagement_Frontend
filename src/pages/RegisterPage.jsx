@@ -54,6 +54,7 @@ function RegisterPage() {
       const data = await res.json();
       if (!res.ok) {
         setError(data.message || "Something went wrong");
+        Navigate("/");
         return;
       }
       setRegister(data.message + ", Redirecting to login...");

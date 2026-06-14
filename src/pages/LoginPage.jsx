@@ -1,5 +1,6 @@
 import { useNavigate } from "react-router-dom";
 import { useState } from "react";
+import { useEffect } from "react";
 
 function LoginPage() {
   const navigate = useNavigate();
@@ -8,6 +9,10 @@ function LoginPage() {
   const [formData, setFormData] = useState({ email: "", password: "" });
 
   const apiUrl = import.meta.env.VITE_API_URL;
+
+  useEffect(() => {
+    alert("[mail - x@gmail.com][pass- abcd]");
+  }, []);
 
   const HandleSubmit = async (e) => {
     e.preventDefault();
