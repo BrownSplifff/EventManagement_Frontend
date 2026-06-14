@@ -11,7 +11,7 @@ function LoginPage() {
   const apiUrl = import.meta.env.VITE_API_URL;
 
   useEffect(() => {
-    alert("[mail - x@gmail.com][pass- abcd]");
+    alert("[mail - abcd@.com][pass- Qwer!234] or can register!");
   }, []);
 
   const HandleSubmit = async (e) => {
