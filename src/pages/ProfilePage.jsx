@@ -32,7 +32,7 @@ function ProfilePage() {
   async function handleAccountDelete() {
     try {
       const token = localStorage.getItem("token");
-      const res = await fetch(`${apiUrl}auth/delete`, {
+      const res = await fetch(`${apiUrl}delete`, {
         method: "DELETE",
         headers: { Authorization: `Bearer ${token}` },
       });
