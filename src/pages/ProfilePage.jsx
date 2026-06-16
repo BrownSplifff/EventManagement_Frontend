@@ -13,7 +13,7 @@ function ProfilePage() {
   async function handleEditProfile(updatedData) {
     try {
       const token = localStorage.getItem("token");
-      const res = await fetch(`${apiUrl}/auth/profile/update`, {
+      const res = await fetch(`${apiUrl}auth/profile/update`, {
         method: "PUT",
         credentials: "include",
         headers: {
@@ -32,7 +32,7 @@ function ProfilePage() {
   async function handleAccountDelete() {
     try {
       const token = localStorage.getItem("token");
-      const res = await fetch(`${apiUrl}/auth/delete`, {
+      const res = await fetch(`${apiUrl}auth/delete`, {
         method: "DELETE",
         headers: { Authorization: `Bearer ${token}` },
       });
